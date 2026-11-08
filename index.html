@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三界回廊 · 文字冒险</title>
+<meta http-equiv="refresh" content="5;url=https://sanjie-corridor.app.workbuddy.host/?sharecode=3BWTI32Q7T">
+<style>
+  :root{
+    --bg:#161311; --panel:#1f1b17; --panel2:#282219;
+    --ink:#e9e2d3; --ink-dim:#9a917e;
+    --accent:#c14a34; --accent-dim:#7a3527; --line:#3a3227;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink); min-height:100vh;
+    font-family:"Noto Serif SC","Source Han Serif SC","STSong","SimSun",serif;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .card{max-width:680px;width:100%;text-align:center;padding:40px 8px}
+  .tag{color:var(--ink-dim);font-size:14px;letter-spacing:.5em;margin-bottom:18px}
+  h1{font-size:52px;letter-spacing:.22em;margin-bottom:8px}
+  .sub{color:var(--accent);letter-spacing:.3em;font-size:15px;margin-bottom:40px}
+  .epochs{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+  .epoch{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px 22px;width:190px;text-align:left}
+  .epoch b{display:block;font-size:16px;margin-bottom:6px;letter-spacing:.1em}
+  .epoch span{color:var(--ink-dim);font-size:13px;line-height:1.7}
+  .epoch i{display:block;color:var(--accent);font-style:normal;font-size:12px;margin-top:8px;letter-spacing:.2em}
+  .enter{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    font-size:17px;letter-spacing:.2em;padding:14px 46px;border-radius:8px;
+    border:1px solid var(--accent);transition:all .2s;
+  }
+  .enter:hover{background:var(--accent-dim)}
+  .note{margin-top:22px;color:var(--ink-dim);font-size:13px;letter-spacing:.1em}
+  .note b{color:var(--ink)}
+  @media(max-width:560px){h1{font-size:36px}.epoch{width:100%}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="tag">文字冒险 · AI 主理人</div>
+  <h1>三界回廊</h1>
+  <div class="sub">已写死的命运动不了 · 没写到的世界我来判</div>
+  <div class="epochs">
+    <div class="epoch"><b>第一纪 · 九州</b><span>星辰尚在人间的上古，六族并立，命星定命。</span><i>缥缈录</i></div>
+    <div class="epoch"><b>第二纪 · 天庭</b><span>九州崩毁后神权升起，取经是一场布置好的局。</span><i>悟空传</i></div>
+    <div class="epoch"><b>第三纪 · 青铜</b><span>神话退潮的现代，龙族潜伏在文明阴影之下。</span><i>龙族</i></div>
+  </div>
+  <a class="enter" href="https://sanjie-corridor.app.workbuddy.host/?sharecode=3BWTI32Q7T">进入回廊</a>
+  <div class="note"><b><span id="cd">5</span></b> 秒后自动进入……</div>
+</div>
+<script>
+  let n = 5;
+  const el = document.getElementById("cd");
+  const t = setInterval(() => {
+    n--; if(el) el.textContent = n;
+    if(n <= 0){ clearInterval(t); location.href = "https://sanjie-corridor.app.workbuddy.host/?sharecode=3BWTI32Q7T"; }
+  }, 1000);
+</script>
+</body>
+</html>
